@@ -2,7 +2,6 @@
 echo ""
 echo "======= Setting up base BungeeCord"
 echo ""
-rm --help
 if [ -d "BungeeCord" ] && [[ $(ls BungeeCord) ]]; then
   cd BungeeCord
   git fetch origin
