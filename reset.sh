@@ -2,6 +2,7 @@
 echo ""
 echo "======= Setting up base BungeeCord"
 echo ""
+rm --help
 if [ -d "BungeeCord" ] && [[ $(ls BungeeCord) ]]; then
   cd BungeeCord
   git fetch origin
@@ -10,7 +11,7 @@ if [ -d "BungeeCord" ] && [[ $(ls BungeeCord) ]]; then
   echo "======= BungeeCord updated to latest version"
 else
   if [ -d "BungeeCord" ]; then
-    rm -rfd BungeeCord
+    rm -rfd BungeeCord || rm -rf BungeeCord
   fi
   git clone https://github.com/SpigotMC/BungeeCord.git BungeeCord
   echo "======= BungeeCord newly cloned"
